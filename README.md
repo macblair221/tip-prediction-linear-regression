@@ -1,4 +1,4 @@
-# tip-prediction-linear-regression
+# Tip prediction linear regression analysis
 
 This project analyzes how different features influence the accuracy of predicting restaurant tip amounts using linear regression. The goal is to compare multiple models, evaluate their performance, and explore how feature engineering affects predictions.
 
@@ -30,8 +30,26 @@ All models were trained using the closed-form normal equation and evaluated usin
     
     - Multicollinearity awareness and avoiding rank-deficient matrices
 
-    - Overfitting vs. generalization
+# Results Summary
 
-    - Model evaluation using MSE
+Model Performance (lower MSE is better):
 
-    - Visualization with Plotly (2D, 3D, polynomial curves)
+  1. Total Bill Only: approx 1.0360
+
+  2. Total Bill + Table Size: approx 1.0146
+
+  3. Standardized Two-Feature: approx 1.0146
+
+  4. Fourth-Degree Polynomial: approx 0.9454
+
+  5. Total Bill + One-Hot Encoded Day: approx 1.0317
+
+The polynomial model produced the lowest MSE but failed when extrapolating, demonstrating classic overfitting (example: a 350 dollar bill produced an unrealistic predicted tip above 100,000 dollars).
+
+# Repository Contents
+
+  - tip_prediction.ipynb (main notebook)
+
+  - README.md
+
+  - images folder (optional for storing exported charts)
