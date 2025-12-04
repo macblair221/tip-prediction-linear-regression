@@ -1,95 +1,37 @@
 # tip-prediction-linear-regression
 
-Predicting Restaurant Tips Using Linear Regression and Feature Engineering
+This project analyzes how different features influence the accuracy of predicting restaurant tip amounts using linear regression. The goal is to compare multiple models, evaluate their performance, and explore how feature engineering affects predictions.
 
-This project explores how different features influence the accuracy of tip prediction models using the Tips dataset.
-The goal is to build, visualize, and compare several linear regression models while demonstrating core machine learning concepts such as feature engineering, multicollinearity, standardization, and overfitting.
+The project was completed in Python using Jupyter Notebook, NumPy, Pandas, and Plotly. 
 
-The project was developed entirely in Python using NumPy, Pandas, and Plotly, inside a Jupyter Notebook.
+# Overview
 
-Overview
+I built several regression models to determine which features best predict the tip a customer leaves. The models include:
 
-I built and evaluated multiple regression models to understand which factors best predict the tip customers leave at a restaurant.
-The models tested include:
+  1. Simple linear regression using total bill
 
-Simple Linear Regression using total bill
+  2. Multivariate regression using total bill and table size
 
-Multivariate Linear Regression using total bill + table size
+  3. Standardized two-feature model
 
-Standardized Two-Feature Model
+  4. Fourth-degree polynomial regression
 
-Fourth-Degree Polynomial Regression to study overfitting
+  5. Linear regression with one-hot encoded categorical features (day of week)
 
-Model with One-Hot Encoded Categorical Features (day of the week)
+All models were trained using the closed-form normal equation and evaluated using mean squared error (MSE).
 
-Each model was trained using the normal equation, and evaluated using mean squared error (MSE).
+# Key Concepts Demonstrated
 
-Key Concepts Demonstrated
-• Linear Regression from First Principles
+    - Linear regression from first principles
 
-Design matrices were created manually and parameters were solved using
+    - Manual design matrix creation
 
-𝑤
-∗
-=
-(
-𝑋
-𝑇
-𝑋
-)
-−
-1
-𝑋
-𝑇
-𝑦
-.
-w
-∗
-=(X
-T
-X)
-−1
-X
-T
-y.
-• Feature Engineering
+    - Feature engineering: polynomial features, standardization, and one-hot encoding
+    
+    - Multicollinearity awareness and avoiding rank-deficient matrices
 
-The project includes:
+    - Overfitting vs. generalization
 
-Polynomial features up to degree 4
+    - Model evaluation using MSE
 
-Standardization
-
-One-hot encoding of categorical variables
-
-Comparison of feature importance
-
-• Model Evaluation
-
-Each model’s performance was assessed with:
-
-Mean Squared Error (MSE)
-
-Visual inspection through plots (2D, 3D, polynomial curves)
-
-Extrapolation behavior (to show overfitting)
-
-• Visualization
-
-Interactive Plotly charts were generated, including:
-
-Scatter plots
-
-Regression lines
-
-3D regression surfaces
-
-Polynomial hypothesis functions
-
-Results Summary
-Model	MSE
-Total Bill Only	~1.0360
-Total Bill + Table Size	~1.0146
-Standardized Two-Feature	~1.0146
-Fourth-Degree Polynomial	~0.9454
-Total Bill + OHE Day	~1.0317
+    - Visualization with Plotly (2D, 3D, polynomial curves)
